@@ -69,6 +69,8 @@ body {
 h1 {
 	position: relative;
 	text-align: center;
+	text-decoration: underline;
+	text-underline-position: under;
   }
   
   h1::after {
@@ -81,5 +83,26 @@ h1 {
 	width: 100%;
 	height: 3px;
 	z-index: -1;
+	animation-name: moveLine;
+	animation-duration: 1s;
   }
+
+  h1::before {
+	content: '';
+	position: absolute;
+	top: 24%;
+	left: 0%;
+	background: var(--color-text);
+	width: 100%;
+	height: 3px;
+	z-index: -1;
+	animation-name: moveLine;
+	animation-duration: 1s;
+  }
+
+
+@keyframes moveLine {
+	0% {transform: translateX(-30em);}
+	100% {transform: translateX(0em);}
+}
   
