@@ -51,9 +51,20 @@ body {
 	font-family: "dazzle-unicase", sans-serif;
 	font-weight: 300;
 	font-style: normal;
+
+/* center the logo */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+
+	
   	color:var(--color-text);
   	background-color:var(--color-background);
 }
 
 /* jouw code */
 
+h1 {
+	
+}

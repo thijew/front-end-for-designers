@@ -22,8 +22,8 @@
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
+  - Het animeren met css.
+  - Op de correcte en nieuwste manier, css scrhijven .
   - nog een punt
   - ...
  
