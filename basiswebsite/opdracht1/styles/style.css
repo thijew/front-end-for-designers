@@ -38,7 +38,7 @@ summary {
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
+
 	--color-text: #111;
 	--color-background: #eee;
 	--line: #00000098;
@@ -73,7 +73,7 @@ body {
 /* styling sections */
 
 section {
-    display: flex;
+	display: flex;
 	flex-direction: column;
 	/* this doesnt work? */
 }
@@ -138,47 +138,48 @@ section.lines h1 span:nth-of-type(4)::after {
 	}
 }
 
-/* Adding the skateboard *
-
-/* section.lines h1 span:nth-of-type(1)::before {
-	content: '';
-} */
+/* adding the skateboard */
 
 section.lines h1 span:nth-of-type(1)::after {
 	visibility: hidden;
 	content: '🛹';
-	font-size:2em;
-	filter:brightness(0);
+	font-size: 2em;
+	filter: brightness(0);
 	position: absolute;
 	top: -1em;
 	left: 0%;
 	bottom: 100%;
 	animation-name: moveBoard;
-	animation-duration: 1.6s;
-	animation-fill-mode: forwards;
+	animation-duration: 2s;
+	animation-fill-mode: forwards ;
 	animation-delay: 1s;
 }
 
 @keyframes moveBoard {
 	0% {
 		visibility: visible;
-		opacity: 0;
-		
-    }
+		opacity: 0.2;
+		transform: translateX(1.6em) rotateY(0deg);
 
+	}
 	1% {
 		visibility: visible;
-		transform: translateX(-1em);
-		/* opacity: 1; */
+		transform: translateX(-1em) translateY(0em);
+	}
+	20% {
+		transform: translateY(-0.1em) rotateY(0deg) ;
+	}
+	25% {
+		transform: translateY(-0.3em) rotateY(180deg) ;
+	}
+	40% {
+        transform: translateY(-0.3em) rotateY(360deg) ;
     }
-	
-
 	100% {
 		visibility: visible;
-        transform: translateX(1.6em);
-		opacity: 1;
-    }
-	
+		transform: translateX(1.6em) rotateY(0deg);
+
+	}
 }
 
 
