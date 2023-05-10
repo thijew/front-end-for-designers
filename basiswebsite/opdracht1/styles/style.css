@@ -167,13 +167,17 @@ section.lines h1 span:nth-of-type(1)::after {
 		transform: translateX(-1em) translateY(0em);
 	}
 	20% {
-		transform: translateY(-0.1em) rotateY(0deg) ;
+		transform: translateY(-0.04em) rotateY(0deg) ;
 	}
 	25% {
-		transform: translateY(-0.3em) rotateY(180deg) ;
+		transform: translateY(-0.06em) rotateY(180deg) ;
 	}
 	40% {
-        transform: translateY(-0.3em) rotateY(360deg) ;
+        transform: translateY(-0.1em) rotateY(0deg) ;
+    }
+
+	60% {
+        transform: translateX(1em) rotateY(0deg);
     }
 	100% {
 		visibility: visible;
