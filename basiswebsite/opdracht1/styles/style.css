@@ -42,6 +42,7 @@ summary {
 	--color-text: #111;
 	--color-background: #eee;
 	--line: #00000098;
+
 }
 
 
@@ -151,7 +152,7 @@ section.lines h1 span:nth-of-type(1)::after {
 	bottom: 100%;
 	animation-name: moveBoard;
 	animation-duration: 2s;
-	animation-fill-mode: forwards ;
+	animation-fill-mode: forwards;
 	animation-delay: 1s;
 }
 
@@ -162,23 +163,28 @@ section.lines h1 span:nth-of-type(1)::after {
 		transform: translateX(1.6em) rotateY(0deg);
 
 	}
+
 	1% {
 		visibility: visible;
 		transform: translateX(-1em) translateY(0em);
 	}
+
 	20% {
-		transform: translateY(-0.04em) rotateY(0deg) ;
+		transform: translateY(-0.04em) rotateY(0deg);
 	}
+
 	25% {
-		transform: translateY(-0.06em) rotateY(180deg) ;
+		transform: translateY(-0.06em) rotateY(180deg);
 	}
+
 	40% {
-        transform: translateY(-0.1em) rotateY(0deg) ;
-    }
+		transform: translateY(-0.1em) rotateY(0deg);
+	}
 
 	60% {
-        transform: translateX(1em) rotateY(0deg);
-    }
+		transform: translateX(1em) rotateY(0deg);
+	}
+
 	100% {
 		visibility: visible;
 		transform: translateX(1.6em) rotateY(0deg);
@@ -192,10 +198,35 @@ section.lines h1 span:nth-of-type(1)::after {
 
 
 
-/* Sticker idea */
+/* Growing dot idea */
 
-section.sticker h1 {
+section.dot h1:hover {
 	/* Position h1 so content is in content block */
 	position: relative;
 	text-align: center;
+
+}
+
+section.dot span:nth-of-type(4):hover {
+	content: "";
+	animation: biggerDot 1s;
+	background-color: red;
+	width: 100%;
+	height: 100%;
+}
+
+section.dot span:nth-of-type(4)::before {
+	content: '.';
+	animation: biggerDot 2s;
+	width: 100px;
+	height: 100px;
+	background: red;
+	border-radius: 50%
+}
+
+
+@keyframes biggerDot {
+	100% {
+		transform: scale(10);
+	}
 }
