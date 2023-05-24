@@ -13,7 +13,8 @@
 ## Opdracht 1 plan
 
 <details open>
-  <summary>I started off with making a moodboard for the brand BEN-G. </summary>
+  <summary>I started off with making a moodboard  the brand BEN-G. </summary>
+  
   ![moodboard](./readme-images/inspo-board.png)
 
 
