@@ -1,0 +1,235 @@
+/* CSS Document */
+
+/*********/
+/* FONTS */
+/*********/
+/* @font-face {
+	font-family: 'eenfont';
+	src: url('../fonts/eenfont.woff2') format('woff2'),
+		url('../fonts/eenfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+} */
+
+
+
+
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+button:not(:disabled),
+summary {
+	cursor: pointer;
+}
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+
+	--color-text: #111;
+	--color-background: #eee;
+	--line: #00000098;
+}
+
+@media (prefers-color-scheme: light) {
+	
+}
+
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+body {
+	font-family: "dazzle-unicase", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+
+	/* center the logo */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	position: relative;
+	gap: 1em;
+
+	color: var(--color-text);
+	background-color: var(--color-background);
+}
+
+/* jouw code */
+
+/* styling sections */
+
+section {
+	display: flex;
+	flex-direction: column;
+	/* this doesnt work? */
+}
+
+
+/* 3 lines idea */
+/* Recode the sections into ul/li */
+
+section.lines h1 {
+	/* Position h1 so content is in content block */
+	position: relative;
+	text-align: center;
+}
+
+
+section.lines h1::after,
+section.lines h1::before {
+	content: '';
+	position: absolute;
+	background: var(--line);
+	width: 100%;
+	height: 4px;
+}
+
+section.lines h1::after {
+	/* center middle line */
+	bottom: 22%;
+	left: 0;
+	animation-name: moveLine;
+	animation-duration: 1s;
+}
+
+section.lines h1::before {
+	/* Position top line */
+	top: 24%;
+	left: 0%;
+	animation-name: moveLine;
+	animation-duration: 1s;
+}
+
+section.lines h1 span:nth-of-type(4)::after {
+	content: '';
+	position: absolute;
+	text-align: center;
+	background: var(--line);
+	width: 100%;
+	height: 4px;
+	top: 47.5%;
+	left: 0%;
+	animation-name: moveLine;
+	animation-duration: 1s;
+}
+
+/* Set keyframe to move the lines into the logo */
+@keyframes moveLine {
+	0% {
+		transform: translateX(-30em);
+	}
+
+	100% {
+		transform: translateX(0em);
+	}
+}
+
+/* adding the skateboard */
+
+section.lines h1 span:nth-of-type(1)::after {
+	visibility: hidden;
+	content: '🛹';
+	font-size: 2em;
+	filter: brightness(0);
+	position: absolute;
+	top: -1em;
+	left: 0%;
+	bottom: 100%;
+	animation-name: moveBoard;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+}
+
+@keyframes moveBoard {
+	0% {
+		visibility: visible;
+		opacity: 0.2;
+		transform: translateX(1.6em) rotateY(0deg);
+
+	}
+
+	1% {
+		visibility: visible;
+		transform: translateX(-1em) translateY(0em);
+	}
+
+	20% {
+		transform: translateY(-0.04em) rotateY(0deg);
+	}
+
+	25% {
+		transform: translateY(-0.06em) rotateY(180deg);
+	}
+
+	40% {
+		transform: translateY(-0.1em) rotateY(0deg);
+	}
+
+	60% {
+		transform: translateX(1em) rotateY(0deg);
+	}
+
+	100% {
+		visibility: visible;
+		transform: translateX(1.6em) rotateY(0deg);
+
+	}
+}
+
+
+
+
+
+
+
+/* Growing dot idea */
+
+section.dot h1:hover {
+	/* Position h1 so content is in content block */
+	position: relative;
+	text-align: center;
+
+}
+
+section.dot span:nth-of-type(4):hover {
+	content: "";
+	animation: biggerDot 1s;
+	background-color: red;
+	width: 100%;
+	height: 100%;
+}
+
+section.dot span:nth-of-type(4)::before {
+	content: '.';
+	animation: biggerDot 2s;
+	width: 100px;
+	height: 100px;
+	background: red;
+	border-radius: 50%
+}
+
+
+@keyframes biggerDot {
+	100% {
+		transform: scale(10);
+	}
+}
