@@ -46,7 +46,7 @@ summary {
 	/* colors for dark mode */
 	--dark-text: #eee;
 	--dark-background: #333;
-	--dark-line: #FFFFFF98;
+	--dark-line: #00000095;
 
 }
 
@@ -96,6 +96,7 @@ section.lines h1 {
 
 section.lines h1::after,
 section.lines h1::before {
+	/* create 2 lines */
 	content: '';
 	position: absolute;
 	background: var(--line);
@@ -120,6 +121,7 @@ section.lines h1::before {
 }
 
 section.lines h1 span:nth-of-type(4)::after {
+	/* position bottom line */
 	content: '';
 	position: absolute;
 	text-align: center;
@@ -203,8 +205,9 @@ section.lines h1 span:nth-of-type(1)::after {
         background-color:  var(--dark-background);
     }
 	
+	/* making skateboard white */
 	section.lines h1 span:nth-of-type(1)::after {
-		filter: brightness(1000);
+		filter: brightness(100000);
 	}
 
 	section.lines h1::after,
@@ -223,11 +226,9 @@ section.lines h1 span:nth-of-type(1)::after {
 
 /* Growing dot idea */
 
-section.dot h1:hover {
-	/* Position h1 so content is in content block */
+/* section.dot h1:hover {
 	position: relative;
 	text-align: center;
-
 }
 
 section.dot span:nth-of-type(4):hover {
@@ -252,4 +253,4 @@ section.dot span:nth-of-type(4)::before {
 	100% {
 		transform: scale(10);
 	}
-}
+} */
