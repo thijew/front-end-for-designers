@@ -1,7 +1,7 @@
 # Procesverslag
 **Auteur:** Thije Wind
 
-**De opdrachten:** [opdracht 1](opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
+**De opdrachten:** [opdracht 1](./basiswebsite/opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
 
 ## Bronnenlijst
   1. -bron 1-
