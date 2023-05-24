@@ -42,7 +42,10 @@ summary {
 	--color-text: #111;
 	--color-background: #eee;
 	--line: #00000098;
+}
 
+@media (prefers-color-scheme: light) {
+	
 }
 
 
