@@ -60,19 +60,19 @@
 ## Opdracht 2 plan
 
 <details>
-  <summary>uitwerken na schetsen idee (voor week 5)</summary>
+  <summary>For the second project I want to make a blackjack casino game.</summary>
 
 
   ### Je ontwerp:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="ontwerp opdracht 2">
+  <img src="readme-images/wireframe-opdr2.png" width="375px" alt="ontwerp opdracht 2">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Custom properties gebruiken bij meer dan alleen kleuren en verloopjes.
+  - Gebruik maken van JavaScript animation events.
+  - Werken met voice commands.
+  - Gebruik maken van APIs.
 </details>
 
 
