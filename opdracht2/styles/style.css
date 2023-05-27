@@ -5,8 +5,8 @@
 /*********/
 @font-face {
 	font-family: 'didot-regular';
-	src: 	
-			url('../fonts/didot-regular.woff2') format('woff2');
+	src:
+		url('../fonts/didot-regular.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 
@@ -14,8 +14,8 @@
 
 @font-face {
 	font-family: 'didot-bold';
-	src: 	
-			url('../fonts/didot-regular.woff2') format('woff2');
+	src:
+		url('../fonts/didot-regular.woff2') format('woff2');
 	font-weight: bold;
 	font-style: normal;
 
@@ -28,11 +28,14 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
 
-button:not(:disabled), summary {
+button:not(:disabled),
+summary {
 	cursor: pointer;
 }
 
@@ -45,11 +48,12 @@ button:not(:disabled), summary {
 /*********************/
 :root {
 	/* colors */
-	--color-text:#111;
-	--color-table:#006400;
-	--clr-secondary:#003366;
-	--clr-btn:#800080;
-	--clr-money:#FFD700;
+	--clr-text: #111;
+	--clr-table: #006400;
+	--clr-wood: #563105;
+	--clr-secondary: #003366;
+	--clr-btn: #800080;
+	--clr-money: #FFD700;
 
 	/* Fonts */
 	--header-font: "didot-bold", sans-serif, Arial, Helvetica;
@@ -64,10 +68,99 @@ button:not(:disabled), summary {
 /* JOUW STYLING */
 /****************/
 body {
-  font-family: var(--main-font);
-  color:var(--color-text);
-  background-color:var(--color-table);
+	font-family: var(--main-font);
+	color: var(--clr-text);
+	height: 100dvh;
+	margin: 0;
+
+	/* used to make it look more like a blackjack table */
+	background:
+		radial-gradient(circle at 50% 50%, rgba(0, 100, 0, 1), rgba(10, 94, 17, 1)),
+		url(/opdracht2/images/noise.svg);
+
 }
+
+
 
 /* jouw code */
 
+/* header */
+
+header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin: 0 1em 0;
+}
+
+header h1 {
+	display: flex;
+	align-self: flex-start;
+	color: var(--clr-money)
+}
+
+header div {
+	position: absolute;
+	margin: 0;
+	width: 4rem;
+	height: 5rem;
+	right: 1.5rem;
+	top: 1rem;
+	background-color: var(--clr-wood);
+	transform: rotate(-45.07deg);
+}
+
+
+
+
+
+/* Main */
+
+main {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+main h1 {
+	display: flex;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+	width: 100dvw;
+	position: fixed;
+	bottom: 1rem;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+footer ul:first-of-type {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+footer ul:first-of-type li {
+	display: flex;
+	text-align: center;
+}
+
+footer ul:nth-of-type(2) {
+	display: none;
+}

@@ -4,7 +4,7 @@
 **De opdrachten:** [opdracht 1](./opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
 
 ## Bronnenlijst
-  1. -bron 1-
+  1. https://css-tricks.com/grainy-gradients/
   2. -bron 2-
   3. -...-
 
