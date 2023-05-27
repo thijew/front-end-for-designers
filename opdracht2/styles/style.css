@@ -4,10 +4,19 @@
 /* FONTS */
 /*********/
 @font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
+	font-family: 'didot-regular';
+	src: 	
+			url('../fonts/didot-regular.woff2') format('woff2');
 	font-weight: normal;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'didot-bold';
+	src: 	
+			url('../fonts/didot-regular.woff2') format('woff2');
+	font-weight: bold;
 	font-style: normal;
 
 }
@@ -35,9 +44,16 @@ button:not(:disabled), summary {
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
+	/* colors */
 	--color-text:#111;
-	--color-background:#eee;
+	--color-table:#006400;
+	--clr-secondary:#003366;
+	--clr-btn:#800080;
+	--clr-money:#FFD700;
+
+	/* Fonts */
+	--header-font: "didot-bold", sans-serif, Arial, Helvetica;
+	--main-font: "didot-regular", sans-serif, Arial, Helvetica;
 }
 
 
@@ -48,9 +64,9 @@ button:not(:disabled), summary {
 /* JOUW STYLING */
 /****************/
 body {
-  font-family:eenfont, sans-serif;
+  font-family: var(--main-font);
   color:var(--color-text);
-  background-color:var(--color-background);
+  background-color:var(--color-table);
 }
 
 /* jouw code */

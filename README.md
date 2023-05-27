@@ -73,6 +73,7 @@
   - Gebruik maken van JavaScript animation events.
   - Werken met voice commands.
   - Gebruik maken van APIs.
+  - Werken met display p3 voor kleuren.
 </details>
 
 
