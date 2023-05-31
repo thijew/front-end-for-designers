@@ -4,8 +4,8 @@
 **De opdrachten:** [opdracht 1](./opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
 
 ## Bronnenlijst
-  1. https://css-tricks.com/grainy-gradients/
-  2. -bron 2-
+  1. [Background table gradient](https://css-tricks.com/grainy-gradients/)
+  2. [Poker Chip design](https://codepen.io/hoangtx/pen/AaLwqb) 
   3. -...-
 
 

@@ -55,9 +55,21 @@ summary {
 	--clr-btn: #800080;
 	--clr-money: #FFD700;
 
+	--chip-1: #FF0000;
+	--chip-2: #0000FF;
+	--chip-3: #009600;
+	--chip-4: #ff6600;
+	--chip-5: #000000;
+	--chip-break: #fff;
+
 	/* Fonts */
 	--header-font: "didot-bold", sans-serif, Arial, Helvetica;
 	--main-font: "didot-regular", sans-serif, Arial, Helvetica;
+
+	/* Chip sizes */
+	--height: 3.5em;
+	--border-width: 0.4em;
+
 }
 
 
@@ -72,6 +84,7 @@ body {
 	color: var(--clr-text);
 	height: 100dvh;
 	margin: 0;
+	padding: 0;
 
 	/* used to make it look more like a blackjack table */
 	background:
@@ -91,6 +104,7 @@ header {
 	align-items: flex-start;
 	justify-content: space-between;
 	margin: 0 1em 0;
+	height: 20%;
 }
 
 header h1 {
@@ -121,11 +135,14 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	position: relative;
+
+	text-align: center;
 }
 
 main h1 {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
 }
 
@@ -139,12 +156,16 @@ main h1 {
 
 /* Footer */
 footer {
+	height: 20%;
+	background-color: var(--clr-wood);
 	width: 100dvw;
 	position: fixed;
-	bottom: 1rem;
+	bottom: 0;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	border-radius: 20 0 20;
+
 }
 
 footer ul:first-of-type {
@@ -152,13 +173,42 @@ footer ul:first-of-type {
 	align-items: center;
 	justify-content: center;
 	list-style-type: none;
-	margin: 0;
+	margin: 1em;
 	padding: 0;
+	gap: 0.5em;
+	font: var(--header-font);
+
 }
 
 footer ul:first-of-type li {
 	display: flex;
 	text-align: center;
+	justify-content: center;
+	align-items: center;
+	width: var(--height);
+	height: var(--height);
+	border-radius: var(--height);
+	border: var(--border-width) dashed var(--chip-break);
+}
+footer ul:first-of-type li a {
+	text-decoration: none;
+	color: var(--chip-break);
+}
+
+footer ul:first-of-type li:nth-of-type(1) {
+	background-color: var(--chip-1);
+}
+footer ul:first-of-type li:nth-of-type(2) {
+	background-color: var(--chip-2);
+}
+footer ul:first-of-type li:nth-of-type(3) {
+	background-color: var(--chip-3);
+}
+footer ul:first-of-type li:nth-of-type(4) {
+	background-color: var(--chip-4);
+}
+footer ul:first-of-type li:nth-of-type(5) {
+	background-color: var(--chip-5);
 }
 
 footer ul:nth-of-type(2) {
