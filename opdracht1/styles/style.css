@@ -42,14 +42,20 @@ summary {
 	--color-text: #111;
 	--color-background: #eee;
 	--line: #00000098;
-
-	/* colors for dark mode */
-	--dark-text: #eee;
-	--dark-background: #333;
-	--dark-line: #00000095;
+	--filter-brightness: brightness(0);
 
 }
 
+/* adding darkmode */
+@media (prefers-color-scheme: light) {
+	:root {
+		--color-text: #eee;
+		--color-background: #333;
+		--line: #00000095;
+		--filter-brightness: brightness(100000000);
+	};
+
+};
 
 
 
@@ -57,45 +63,30 @@ summary {
 /* JOUW STYLING */
 /****************/
 body {
-	font-family: "dazzle-unicase", sans-serif;
+	font-family: "dazzle-unicase", Arial, Helvetica, sans-serif;
 	font-weight: 300;
 	font-style: normal;
-
 	/* center the logo */
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	height: 100dvh;
 	position: relative;
 	gap: 1em;
-
 	color: var(--color-text);
 	background-color: var(--color-background);
 }
 
 /* jouw code */
-
-/* styling sections */
-
-section {
-	display: flex;
-	flex-direction: column;
-	/* this doesnt work? */
-}
-
-
-/* 3 lines idea */
-/* Recode the sections into ul/li */
-
-section.lines h1 {
+ h1 {
 	/* Position h1 so content is in content block */
 	position: relative;
 	text-align: center;
 }
 
 
-section.lines h1::after,
-section.lines h1::before {
+ h1::after,
+ h1::before {
 	/* create 2 lines */
 	content: '';
 	position: absolute;
@@ -104,7 +95,7 @@ section.lines h1::before {
 	height: 4px;
 }
 
-section.lines h1::after {
+ h1::after {
 	/* center middle line */
 	bottom: 22%;
 	left: 0;
@@ -112,7 +103,7 @@ section.lines h1::after {
 	animation-duration: 1s;
 }
 
-section.lines h1::before {
+ h1::before {
 	/* Position top line */
 	top: 24%;
 	left: 0%;
@@ -120,7 +111,7 @@ section.lines h1::before {
 	animation-duration: 1s;
 }
 
-section.lines h1 span:nth-of-type(4)::after {
+ h1 span:nth-of-type(4)::after {
 	/* position bottom line */
 	content: '';
 	position: absolute;
@@ -147,11 +138,11 @@ section.lines h1 span:nth-of-type(4)::after {
 
 /* adding the skateboard */
 
-section.lines h1 span:nth-of-type(1)::after {
+ h1 span:nth-of-type(1)::after {
 	visibility: hidden;
 	content: '🛹';
 	font-size: 2em;
-	filter: brightness(0);
+	filter: var(--filter-brightness);
 	position: absolute;
 	top: -1em;
 	left: 0%;
@@ -197,60 +188,3 @@ section.lines h1 span:nth-of-type(1)::after {
 
 	}
 }
-
-/* adding darkmode */
-@media (prefers-color-scheme: dark) {
-	body {
-        color:  var(--dark-text);
-        background-color:  var(--dark-background);
-    }
-	
-	/* making skateboard white */
-	section.lines h1 span:nth-of-type(1)::after {
-		filter: brightness(100000);
-	}
-
-	section.lines h1::after,
-	section.lines h1::before,
-	section.lines h1 span:nth-of-type(4)::after {
-		background-color: var(--dark-line)
-
-	}
-};
-
-
-
-
-
-
-
-/* Growing dot idea */
-
-/* section.dot h1:hover {
-	position: relative;
-	text-align: center;
-}
-
-section.dot span:nth-of-type(4):hover {
-	content: "";
-	animation: biggerDot 1s;
-	background-color: red;
-	width: 100%;
-	height: 100%;
-}
-
-section.dot span:nth-of-type(4)::before {
-	content: '.';
-	animation: biggerDot 2s;
-	width: 100px;
-	height: 100px;
-	background: red;
-	border-radius: 50%
-}
-
-
-@keyframes biggerDot {
-	100% {
-		transform: scale(10);
-	}
-} */
