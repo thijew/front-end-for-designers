@@ -82,7 +82,7 @@ summary {
 body {
 	font-family: var(--main-font);
 	color: var(--clr-text);
-	height: 100dvh;
+	height: 100vh;
 	margin: 0;
 	padding: 0;
 
@@ -90,14 +90,11 @@ body {
 	background:
 		radial-gradient(circle at 50% 50%, rgba(0, 100, 0, 1), rgba(10, 94, 17, 1)),
 		url(/opdracht2/images/noise.svg);
-
 }
 
 li {
 	list-style: none;
 }
-
-
 
 /* jouw code */
 
@@ -141,6 +138,7 @@ main {
 	justify-content: center;
 	position: relative;
 	text-align: center;
+
 }
 
 main h1 {
@@ -158,6 +156,9 @@ section:first-of-type {
 	height: 100%;
 	display: grid;
 }
+section:first-of-type p {
+	height: 20%;
+}
 
 section:first-of-type ul {
 	display: grid;
@@ -174,7 +175,6 @@ section:first-of-type ul:last-of-type {
 }
 
 section:first-of-type ul li {
-	display: grid;
 	width: 3em;
 
 }
@@ -232,7 +232,7 @@ section:last-of-type ul:first-of-type li button {
 	border: transparent;
 	color: var(--chip-break)
 }
-
+/* set the color for the chips */
 section:last-of-type ul:first-of-type li:nth-of-type(1) {
 	background-color: var(--chip-1);
 }

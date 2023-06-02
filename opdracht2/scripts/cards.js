@@ -11,7 +11,7 @@ console.log("howdy")
 // }
 
 // getDecks(deck_id)
-const dealButton = document.querySelector("button:nth-of-type(1)")
+const dealButton = document.querySelector(".dealButton")
 const dealerList = document.querySelector("ul:nth-of-type(1)")
 const playerList = document.querySelector("ul:nth-of-type(2)")
 
@@ -47,8 +47,8 @@ async function getData(URL) {
 	);
 }
 
-// dealButton.onclick = getCards;
+dealButton.onclick = getCards
 
-getCards()
+// dealButton.addEventListener("click", getCards)
 
 
