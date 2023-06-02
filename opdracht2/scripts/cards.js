@@ -11,19 +11,11 @@ console.log("howdy")
 // }
 
 // getDecks(deck_id)
-
-
+const dealButton = document.querySelector("button:nth-of-type(1)")
+const dealerList = document.querySelector("ul:nth-of-type(1)")
 const playerList = document.querySelector("ul:nth-of-type(2)")
 
 const url = "https://deckofcardsapi.com/api/deck/new/draw/?count=4"
-
-function getData(URL) {
-	return (
-		fetch(URL)
-		.then ( response => response.json() )
-		.then ( jsonData => jsonData )
-	);
-}
 
 function getCards() {
     getData(url).then(cards => {
@@ -37,13 +29,25 @@ function getCards() {
         <li><img src="${card1.image}" alt="${card1.code}"></li>
         <li><img src="${card2.image}" alt="${card2.code}"></li>`
 
-        playerList.insertAdjacentHTML("beforeend", playerHTML);
+        playerList.insertAdjacentHTML("beforeend", playerHTML)
 
+        const dealerHTML =`
+        <li><img src="${card3.image}" alt="${card3.code}"></li>
+        <li><img src="${card4.image}" alt="${card4.code}"></li>`
 
-
+        dealerList.insertAdjacentHTML("beforeend", dealerHTML)
     })
-
 }
+
+async function getData(URL) {
+	return (
+		fetch(URL)
+		.then ( response => response.json() )
+		.then ( jsonData => jsonData )
+	);
+}
+
+// dealButton.onclick = getCards;
 
 getCards()
 
