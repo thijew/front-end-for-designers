@@ -156,24 +156,36 @@ main h1 {
 
 section:first-of-type {
 	height: 100%;
+	display: grid;
 }
 
 section:first-of-type ul {
 	display: grid;
-	margin: 1em;
+	margin: 0;
+	padding: 0;
+	grid-template-columns: 1fr 1fr;
+}
+
+section:first-of-type ul:last-of-type {
+	display: grid;
+	margin: 0;
 	padding: 0;
 	grid-template-columns: 1fr 1fr;
 }
 
 section:first-of-type ul li {
 	display: grid;
-	width: 5em;
-	height: 5em;
+	width: 3em;
+
 }
 
 section:first-of-type ul li img {
 	width: 5em;
-	height: 5em;
+	height: 6em;
+}
+
+section:first-of-type ul li:last-of-type img {
+	transform: rotate(10deg);
 }
 
 
