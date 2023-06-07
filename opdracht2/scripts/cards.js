@@ -12,8 +12,9 @@ console.log("howdy")
 
 // getDecks(deck_id)
 const dealButton = document.querySelector(".dealButton")
-const dealerList = document.querySelector("ul:nth-of-type(1)")
-const playerList = document.querySelector("ul:nth-of-type(2)")
+const dealerList = document.querySelector(".dealerCards")
+const playerList = document.querySelector(".playerCards")
+const betText = document.querySelector(".betText")
 
 const url = "https://deckofcardsapi.com/api/deck/new/draw/?count=4"
 
@@ -44,6 +45,7 @@ const newButtons = document.querySelector("section:last-of-type ul:nth-of-type(2
 function showButtons() {
     newButtons.style.display = "flex"
     dealButton.style.display = "none"
+    betText.style.display = "none"
 }
 
 
@@ -62,7 +64,7 @@ function combineFuctions() {
 
 dealButton.onclick = combineFuctions
 
-// showButtons()
+
 
 
 

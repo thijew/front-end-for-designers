@@ -142,11 +142,8 @@ main {
 
 }
 
-main h1 {
+main > h1 {
 	display: none;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
 }
 
 
@@ -156,30 +153,30 @@ main h1 {
 section:first-of-type {
 	display: grid;
 	height: 100%;
-	grid-template-columns: 0.5fr 0.5fr;
-}
-section:first-of-type p {
-	display: grid;
-	height: 20%;
+	grid-template-rows: 0.2fr 0.2fr 0.2fr;
 }
 
-section:first-of-type ul {
+.chips {
+	display: grid;
+}
+
+.dealerCards,
+.playerCards {
 	display: grid;
 	margin: 0;
 	padding: 0;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr ;
 }
-
+/* 
 section:first-of-type ul:last-of-type {
 	display: grid;
 	margin: 0;
 	padding: 0;
-	grid-template-columns: 1fr 1fr;
-}
+	grid-template-columns: 1fr 1fr 1fr;
+} */
 
 section:first-of-type ul li {
 	width: 3em;
-
 }
 
 section:first-of-type ul li img {
@@ -204,7 +201,6 @@ section:last-of-type {
 	align-items: center;
 	flex-direction: column;
 	border-radius: 20% 20% 0 0;
-
 }
 
 section:last-of-type ul:first-of-type {
@@ -229,12 +225,14 @@ section:last-of-type ul:first-of-type li {
 	border-radius: var(--height);
 	border: var(--border-width) dashed var(--chip-break);
 }
+
 section:last-of-type ul:first-of-type li button {
 	text-decoration:  none;
 	background-color: transparent;
 	border: transparent;
 	color: var(--chip-break)
 }
+
 /* set the color for the chips */
 section:last-of-type ul:first-of-type li:nth-of-type(1) {
 	background-color: var(--chip-1);
