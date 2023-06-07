@@ -34,7 +34,7 @@ function getCards() {
 
         const dealerHTML =`
         <li><img src="${card3.image}" alt="${card3.code}"></li>
-        <li><img src="${card4.image}" alt="${card4.code}"></li>`
+        <li><img src="./images/back-card.jpeg" ></li>`
 
         dealerList.insertAdjacentHTML("beforeend", dealerHTML)
     })
@@ -42,13 +42,14 @@ function getCards() {
 
 const newButtons = document.querySelector("section:last-of-type ul:nth-of-type(2)")
 
+// Show new buttons, display cards and hide h1
 function showButtons() {
     newButtons.style.display = "flex"
     dealButton.style.display = "none"
     betText.style.display = "none"
 }
 
-
+// Get data from api
 async function getData(URL) {
 	return (
 		fetch(URL)

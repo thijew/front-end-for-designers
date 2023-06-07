@@ -139,11 +139,14 @@ main {
 	justify-content: center;
 	position: relative;
 	text-align: center;
-
 }
 
-main > h1 {
-	display: none;
+.betText {
+	height: 100%;
+	font-family: var(--header-font);
+	display: flex;
+	color: var(--chip-break);
+	align-items: center;
 }
 
 
