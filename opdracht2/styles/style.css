@@ -82,7 +82,7 @@ summary {
 body {
 	font-family: var(--main-font);
 	color: var(--clr-text);
-	height: 100vh;
+	height: 100dvh;
 	margin: 0;
 	padding: 0;
 
@@ -153,10 +153,12 @@ main h1 {
 /* Cards */
 
 section:first-of-type {
-	height: 100%;
 	display: grid;
+	height: 100%;
+	grid-template-columns: 0.5fr 0.5fr;
 }
 section:first-of-type p {
+	display: grid;
 	height: 20%;
 }
 
@@ -249,6 +251,25 @@ section:last-of-type ul:first-of-type li:nth-of-type(5) {
 	background-color: var(--chip-5);
 }
 
+
+/* Buttons */
+
+section > button,
+section:last-of-type ul:last-of-type li button {
+	font-family: var(--header-font);
+	text-align: center;
+	color: var(--chip-break);
+	background-color: var(--clr-btn);
+	border: none;
+	border-radius: 10%;
+	padding: 0.7em 3em 0.7em 3em;
+}
+
+
 section:last-of-type ul:nth-of-type(2) {
 	display: none;
+	margin: 0;
+	padding: 0;
+	gap: 1rem;
 }
+

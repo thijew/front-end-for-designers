@@ -39,6 +39,14 @@ function getCards() {
     })
 }
 
+const newButtons = document.querySelector("section:last-of-type ul:nth-of-type(2)")
+
+function showButtons() {
+    newButtons.style.display = "flex"
+    dealButton.style.display = "none"
+}
+
+
 async function getData(URL) {
 	return (
 		fetch(URL)
@@ -47,8 +55,16 @@ async function getData(URL) {
 	);
 }
 
-dealButton.onclick = getCards
+function combineFuctions() {
+    showButtons()
+    getCards()
+}
 
-// dealButton.addEventListener("click", getCards)
+dealButton.onclick = combineFuctions
+
+// showButtons()
+
+
+
 
 
