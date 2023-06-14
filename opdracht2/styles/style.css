@@ -7,8 +7,6 @@
 	font-family: 'didot-regular';
 	src:
 		url('../fonts/didot-regular.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
 
 }
 
@@ -17,7 +15,6 @@
 	src:
 		url('../fonts/didot-regular.woff2') format('woff2');
 	font-weight: bold;
-	font-style: normal;
 
 }
 
@@ -61,14 +58,16 @@ summary {
 	--chip-4: #ff6600;
 	--chip-5: #000000;
 	--chip-break: #fff;
+	--chip-middle: #ffffffc4;
 
 	/* Fonts */
 	--header-font: "didot-bold", sans-serif, Arial, Helvetica;
 	--main-font: "didot-regular", sans-serif, Arial, Helvetica;
 
 	/* Chip sizes */
-	--height: 3.5em;
-	--border-width: 0.4em;
+	--height: 3.5rem;
+	--border-width: 0.4rem;
+	--height-middle-chips: 4rem;
 
 }
 
@@ -141,7 +140,7 @@ main {
 	text-align: center;
 }
 
-.betText {
+main > h1 {
 	height: 100%;
 	font-family: var(--header-font);
 	display: flex;
@@ -157,6 +156,8 @@ section:first-of-type {
 	display: grid;
 	height: 100%;
 	grid-template-rows: 0.2fr 0.2fr 0.2fr;
+	z-index: 1;
+	position: absolute;
 }
 
 .chips {
@@ -170,13 +171,6 @@ section:first-of-type {
 	padding: 0;
 	grid-template-columns: 1fr 1fr ;
 }
-/* 
-section:first-of-type ul:last-of-type {
-	display: grid;
-	margin: 0;
-	padding: 0;
-	grid-template-columns: 1fr 1fr 1fr;
-} */
 
 section:first-of-type ul li {
 	width: 3em;
@@ -205,7 +199,7 @@ section:last-of-type {
 	flex-direction: column;
 	border-radius: 20% 20% 0 0;
 }
-
+/* chip rack */
 section:last-of-type ul:first-of-type {
 	display: flex;
 	align-items: center;
@@ -218,6 +212,67 @@ section:last-of-type ul:first-of-type {
 
 }
 
+/* Chips on the table */
+.chipStack {
+	display: grid;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 2.8rem;
+	height: 2.8rem;
+	background-color: var(--chip-middle);
+	border-radius: var(--height);
+}
+
+.chipStack::before {
+	content: "";
+	position: absolute;
+	top: -0.6rem;
+	left: -0.6rem;;
+	display: grid;
+	margin: 0;
+	padding: 0;
+	width: var(--height-middle-chips);
+	height: var(--height-middle-chips);
+	border: var(--border-width) dashed var(--chip-middle);
+	border-radius: 4.2rem;
+}
+
+/* circle around chip */
+.chipStack::after {
+	content: "";
+	position: absolute;
+	top: -1.6rem;
+	left: -1.6rem;
+	display: grid;
+	margin: 0;
+	padding: 0;
+	width: 6rem;
+	height: 6rem;
+	border: 0.3rem solid white;
+	border-radius: 4.2rem;
+	animation-name: chipBgGradient 1s infinite;
+
+}
+
+@keyframes chipBgGradient {
+	0% {
+		visibility: visible;
+
+    }
+
+	100% {
+		visibility: visible;
+		background-image: radial-gradient(circle, rgba(255,255,255,0.4976584383753502) 0%, rgba(255,255,255,1) 100%);
+
+    }
+
+}
+
+
+
+
+/* chips */
 section:last-of-type ul:first-of-type li {
 	display: flex;
 	text-align: center;
@@ -236,6 +291,7 @@ section:last-of-type ul:first-of-type li button {
 	color: var(--chip-break)
 }
 
+
 /* set the color for the chips */
 section:last-of-type ul:first-of-type li:nth-of-type(1) {
 	background-color: var(--chip-1);
@@ -252,6 +308,14 @@ section:last-of-type ul:first-of-type li:nth-of-type(4) {
 section:last-of-type ul:first-of-type li:nth-of-type(5) {
 	background-color: var(--chip-5);
 }
+
+/* Chips */
+
+/* .chips {
+	position: absolute;
+	width: 100dvh;
+	margin: auto;
+} */
 
 
 /* Buttons */

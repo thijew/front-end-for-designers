@@ -10,6 +10,10 @@
 
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+	<!-- include sortablejs library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
+
 </head>
 
 <body>
@@ -22,20 +26,20 @@
 	<main>
 
 		<h1 class="betText">Place your bets please.</h1>
-		
+
 		<!-- middlescetion section -->
 		<section>
 			<!-- dealer cards -->
 			<ul class="dealerCards"></ul>
 			<!-- chips -->
-			<uL class="chips"></uL>
+			<uL class="chipStack"></uL>
 			<!-- player cards -->
 			<ul class="playerCards"></ul>
 		</section>
 
 		<!-- bottom section -->
 		<section>
-			<ul>
+			<ul class="chips">
 				<li><button>1</button></li>
 				<li><button>5</button></li>
 				<li><button>10</button></li>
@@ -55,6 +59,7 @@
 	</main>
 
 	<script src="scripts/cards.js"></script>
+	<script src="scripts/drag-chips.js"></script>
 </body>
 
 </html>

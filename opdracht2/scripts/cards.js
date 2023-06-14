@@ -18,6 +18,7 @@ const betText = document.querySelector(".betText")
 
 const url = "https://deckofcardsapi.com/api/deck/new/draw/?count=4"
 
+// Get the cards from the deck and display in html
 function getCards() {
     getData(url).then(cards => {
         const card1 = cards.cards[0]
@@ -58,12 +59,12 @@ async function getData(URL) {
 	);
 }
 
-function combineFuctions() {
+function combineButton() {
     showButtons()
     getCards()
 }
-
-dealButton.onclick = combineFuctions
+// call the 2 functions
+dealButton.onclick = combineButton
 
 
 
