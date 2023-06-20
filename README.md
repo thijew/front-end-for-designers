@@ -6,21 +6,21 @@
 ## Bronnenlijst
   1. [Background table gradient](https://css-tricks.com/grainy-gradients/)
   2. [Poker Chip design](https://codepen.io/hoangtx/pen/AaLwqb) 
-  3. -...-
+  3. [BEN-G](https://www.ben-g.nl/)
 
 
 
 ## Opdracht 1 plan
 
 <details open>
-  <summary>I started off with making a moodboard  the brand BEN-G. </summary>
+  <summary>I started off with making a moodboard  the brand BEN-G. After that I drew out the animations. The first idea is inspired by their logo on their store with the 3 stripes. This is the idea I ended up making.</summary>
   
   ![moodboard](./readme-images/inspo-board.png)
 
 
   ### Je storyboard:
-  <img src="images/inspo-board.png">
 
+  ![ideas opdracht 1](./readme-images/ideas-opdr1.png)
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
@@ -39,7 +39,8 @@
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="">
+  
+  
 
 
   ### Dit ging goed/Heb ik geleerd: 

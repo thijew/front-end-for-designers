@@ -1,6 +1,6 @@
 const chips = document.querySelector('.chips')
 
-const chipStack = document.querySelector('.chip-stack')
+const chipStack = document.querySelector('.chipStack')
 
 
 
