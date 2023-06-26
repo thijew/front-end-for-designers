@@ -10,6 +10,7 @@ new Sortable(chips, {
         name: 'shared',
         pull: 'clone', // To clone: set pull to 'clone'
         sort: 'false',
+        swap: 'false',
     },
     animation: 100
 });
