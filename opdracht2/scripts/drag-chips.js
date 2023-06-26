@@ -1,3 +1,4 @@
+
 const chips = document.querySelector('.chips')
 
 const chipStack = document.querySelector('.chipStack')
@@ -8,16 +9,16 @@ new Sortable(chips, {
     group: {
         name: 'shared',
         pull: 'clone', // To clone: set pull to 'clone'
-        put: 'false',
-        sort: 'false'
+        sort: 'false',
     },
-    animation: 300
+    animation: 100
 });
 
 new Sortable(chipStack, {
     group: {
         name: 'shared',
-        pull: 'false'
+        pull: 'clone',
     },
-    animation: 300
+    animation: 100
 });
+

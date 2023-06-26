@@ -7,6 +7,7 @@
   1. [Background table gradient](https://css-tricks.com/grainy-gradients/)
   2. [Poker Chip design](https://codepen.io/hoangtx/pen/AaLwqb) 
   3. [BEN-G](https://www.ben-g.nl/)
+  4. [keyboard shortcuts](https://www.youtube.com/watch?v=lNJMDTSkNXo)
 
 
 

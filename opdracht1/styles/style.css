@@ -1,17 +1,5 @@
 /* CSS Document */
 
-/*********/
-/* FONTS */
-/*********/
-/* @font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-		url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-
-} */
-
 
 
 
@@ -53,9 +41,8 @@ summary {
 		--color-background: #333;
 		--line: #00000095;
 		--filter-brightness: brightness(100000000);
-	};
-
-};
+	}
+}
 
 
 

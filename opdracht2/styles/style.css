@@ -81,7 +81,7 @@ summary {
 body {
 	font-family: var(--main-font);
 	color: var(--clr-text);
-	height: 100dvh;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
@@ -140,7 +140,7 @@ header > div > img {
 /* Main */
 
 main {
-	height: 100%;
+	height: 100dvh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -150,7 +150,7 @@ main {
 }
 
 main > h1 {
-	height: 100%;
+	height: fit-content;
 	font-family: var(--header-font);
 	display: flex;
 	color: var(--chip-break);
@@ -165,12 +165,7 @@ section:first-of-type {
 	display: grid;
 	height: 100%;
 	grid-template-rows: 0.2fr 0.2fr 0.2fr;
-	z-index: 1;
-	position: absolute;
-}
-
-.chips {
-	display: grid;
+	position: relative;
 }
 
 .dealerCards,
@@ -178,10 +173,12 @@ section:first-of-type {
 	display: grid;
 	margin: 0;
 	padding: 0;
-	grid-template-columns: 1fr 1fr ;
+	grid-template-columns: 1fr 1fr;
 }
 
 section:first-of-type ul li {
+	position: relative;
+	display: grid;
 	width: 3em;
 }
 
@@ -231,14 +228,14 @@ section:last-of-type ul:first-of-type {
 	height: 2.8rem;
 	background-color: var(--chip-middle);
 	border-radius: var(--height);
+	z-index: 2;
 }
 
 .chipStack::after {
 	content: "";
-	position: absolute;
+	position: relative;
 	top: -0.6rem;
 	left: -0.6rem;;
-	display: grid;
 	margin: 0;
 	padding: 0;
 	width: var(--height-middle-chips);
@@ -250,11 +247,9 @@ section:last-of-type ul:first-of-type {
 /* circle around chip */
 .chipStack::before {
 	content: "";
-
 	position: absolute;
 	top: -1.6rem;
 	left: -1.6rem;
-	display: grid;
 	margin: 0;
 	padding: 0;
 	width: 6rem;
@@ -266,8 +261,10 @@ section:last-of-type ul:first-of-type {
 	animation-fill-mode: forwards;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
+}
 
-
+.middleChips {
+	
 }
 
 @keyframes chipBgGradient {
@@ -290,7 +287,8 @@ section:last-of-type ul:first-of-type {
 
 
 /* chips */
-section:last-of-type ul:first-of-type li {
+section:last-of-type ul:first-of-type li,
+.chipStack > ul:nth-of-type(2) > li{
 	display: flex;
 	text-align: center;
 	justify-content: center;
@@ -301,16 +299,18 @@ section:last-of-type ul:first-of-type li {
 	border: var(--border-width) dashed var(--chip-break);
 }
 
-section:last-of-type ul:first-of-type li button {
+section:last-of-type ul:first-of-type li button,
+.chipStack > ul:nth-of-type(2) > li button {
 	text-decoration:  none;
 	background-color: transparent;
 	border: transparent;
-	color: var(--chip-break)
+	color: var(--chip-break);
+	z-index: 2;
 }
 
 
 /* set the color for the chips */
-section:last-of-type ul:first-of-type li:nth-of-type(1) {
+section:last-of-type ul:first-of-type li:nth-of-type(1){
 	background-color: var(--chip-1);
 }
 section:last-of-type ul:first-of-type li:nth-of-type(2) {
