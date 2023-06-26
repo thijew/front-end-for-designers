@@ -13,6 +13,9 @@
 
 	<!-- include sortablejs library -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
+	<!-- include hotkey library -->
+	<script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+
 
 </head>
 
@@ -30,7 +33,6 @@
 
 		<h1 class="betText">Place your bets please.</h1>
 
-		<div class="hoverchips"></div>
 
 		<!-- middlescetion section -->
 		<section>
@@ -47,11 +49,11 @@
 		<!-- bottom section -->
 		<section>
 			<ul class="chips">
-				<li><button>1</button></li>
-				<li><button>5</button></li>
-				<li><button>10</button></li>
-				<li><button>25</button></li>
-				<li><button>50</button></li>
+				<li id="chip1"><button>1</button></li>
+				<li id="chip2"><button>5</button></li>
+				<li id="chip3"><button>10</button></li>
+				<li id="chip4"><button>20</button></li>
+				<li id="chip5"><button>50</button></li>
 			</ul>
 
 			<button class="dealButton">Deal</button>
