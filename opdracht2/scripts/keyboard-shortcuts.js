@@ -14,42 +14,35 @@ hotkeys('1, 2, 3, 4, 5', function (handler) {
 
     switch (key) {
         case '1':
-            alert('Press')
             const num1 = document.createElement('li')
             num1.id = 'chip1'
             num1.innerHTML = '<button>1</button>'
             chipStack.appendChild(num1).className = 'chip1';
             break
         case '2':
-            alert('Press')
             const num2 = document.createElement('li')
             num2.id = 'chip2'
             num2.innerHTML = '<button>5</button>'
             chipStack.appendChild(num2)
             break
         case '3':
-            alert('Press')
             const num3 = document.createElement('li')
             num3.id = 'chip3'
             num3.innerHTML = '<button>10</button>'
             chipStack.appendChild(num3)
             break
         case '4':
-            alert('Press')
             const num4 = document.createElement('li')
             num4.id = 'chip4'
             num4.innerHTML = '<button>20</button>'
             chipStack.appendChild(num4)
             break
         case '5':
-            alert('Press')
             const num5 = document.createElement('li')
             num5.id = 'chip5'
             num5.innerHTML = '<button>50</button>'
             chipStack.appendChild(num5)
             break
-
-
     }
 });
 

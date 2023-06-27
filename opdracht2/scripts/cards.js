@@ -3,16 +3,24 @@ const dealButton = document.querySelector(".dealButton")
 const dealerList = document.querySelector(".dealerCards")
 const playerList = document.querySelector(".playerCards")
 const betText = document.querySelector(".betText")
-
+const backCard = document.querySelector(".backDealer")
+const backPlayer = document.querySelector(".backPlayer")
 
 const url = "https://deckofcardsapi.com/api/deck/new/draw/?count=4"
 
 
+// Get data from api
+async function getData(URL) {
+    return (
+        fetch(URL)
+            .then(response => response.json())
+            .then(jsonData => jsonData)
+    )
+}
+
 
 // Show the back of the cards
 function getBackCards() {
-    const backCard = document.querySelector('.backDealer')
-    const backPlayer = document.querySelector('.backPlayer')
 
     backCard.classList.add('cardAnimation')
     backPlayer.classList.add('cardAnimation')
@@ -20,9 +28,7 @@ function getBackCards() {
     backPlayer.style.display = 'grid'
 }
 
-async function getCards() {
-
-
+function getCards() {
     getData(url).then(cards => {
         const card1 = cards.cards[0]
         const card2 = cards.cards[1]
@@ -46,29 +52,29 @@ async function getCards() {
 
 const newButtons = document.querySelector("section:last-of-type ul:nth-of-type(2)")
 
+
 // Show new buttons, display cards and hide h1
 function showButtons() {
     newButtons.style.display = "flex"
     dealButton.style.display = "none"
     betText.style.display = "none"
-}
-
-// Get data from api
-async function getData(URL) {
-    return (
-        fetch(URL)
-            .then(response => response.json())
-            .then(jsonData => jsonData)
-    )
+    backCard.style.display = "none"
+    backPlayer.style.display = "none"
 }
 
 
 function combineButton() {
-    showButtons()
     getBackCards()
+    showButtons()
 }
+
 // call the 2 functions
-dealButton.onclick = combineButton
+dealButton.onclick = combineButton()
+
+
+
+
+
 
 
 
