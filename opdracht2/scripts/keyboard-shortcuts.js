@@ -1,4 +1,5 @@
 
+
 const chipsKey = document.querySelector('.chips')
 const chipStackKey = document.querySelector('.chipStack')
 
@@ -7,6 +8,7 @@ const chip2 = chipStack.querySelector('.chip2')
 const chip3 = chipStack.querySelector('.chip3')
 const chip4 = chipStack.querySelector('.chip4')
 const chip5 = chipStack.querySelector('.chip5')
+
 
 // Hotkeys setup to add chips
 hotkeys('1, 2, 3, 4, 5', function (handler) {
@@ -44,5 +46,17 @@ hotkeys('1, 2, 3, 4, 5', function (handler) {
             chipStack.appendChild(num5)
             break
     }
-});
+})
+
+let deal = document.querySelector('.dealButton')
+
+deal.addEventListener('keypress', function (e) {
+    if (e.key === "Enter") {
+        console.log('pressed')
+        e.preventDefault()
+        dealButton.click()
+
+    }
+})
+
 

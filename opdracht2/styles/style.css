@@ -67,6 +67,29 @@ summary {
 
 }
 
+/* adding darkmode */
+@media (prefers-color-scheme: light) {
+	:root {
+	
+			--clr-text: #222222;
+			--clr-playerTable: #003300;
+			--clr-wood: #4A2F00;
+			--clr-secondary: #002244;
+			--clr-btn: #660066;
+			--clr-money: #FFCC00;
+		  
+			--chip-1: #990000;
+			--chip-2: #000099;
+			--chip-3: #008000;
+			--chip-4: #FF5500;
+			--chip-5: #333333;
+			--chip-break: #FFFFFF;
+			--chip-middle: #FFFFFFC4;
+		  
+		  
+	}
+}
+
 
 
 
@@ -267,8 +290,6 @@ section:first-of-type >  ul > li:last-of-type img {
 		opacity: 0;
 		z-index: -1;
 	}
-	0% {opacity: 0;
-		z-index: -1;}
   }
 
   /* show front of the cards */
@@ -291,13 +312,14 @@ section:first-of-type >  ul > li:last-of-type img {
 	}
 	100% {
 	  transform: perspective(25rem) scale(1);
-		z-index: 100;
+		z-index: 10;
 	  animation-timing-function: ease-in;
 	}
   }
   
 /* Chips in the middle*/
 .chipStack {
+	display: flex;
 	position: relative;
 	align-items: center;
 	justify-content: center;
@@ -312,15 +334,13 @@ section:first-of-type >  ul > li:last-of-type img {
 	grid-row-start: 2;
 	grid-column-start: 1;
 	align-self: center;
-
-
-
 }
 
 .chipStack li,
 .chipStack li button {
 	position: absolute;
 	display: grid;
+	place-items: center;
 	margin: 0;
 	padding: 0;
 	width: 2.8rem;
@@ -328,6 +348,7 @@ section:first-of-type >  ul > li:last-of-type img {
 	background-color: var(--chip-middle);
 	border-radius: var(--height);
 	grid-area: 1 / 2 / -3 / 2 ;
+	text-align: center;
 }
 
 .chipStack::after {
@@ -374,6 +395,8 @@ section:first-of-type >  ul > li:last-of-type img {
 		background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
     }
 }
+
+
   
 
 /* bottom Table */

@@ -1,8 +1,9 @@
+
 // JavaScript Document
 const dealButton = document.querySelector(".dealButton")
 const dealerList = document.querySelector(".dealerCards")
 const playerList = document.querySelector(".playerCards")
-const betText = document.querySelector(".betText")
+const betText = document.querySelector("main h1")
 const backCard = document.querySelector(".backDealer")
 const backPlayer = document.querySelector(".backPlayer")
 
@@ -22,10 +23,22 @@ async function getData(URL) {
 // Show the back of the cards
 function getBackCards() {
 
-    backCard.classList.add('cardAnimation')
-    backPlayer.classList.add('cardAnimation')
+    backCard.style.animation = "getCardsAnimation"
+    backCard.style.animation = "getCardsAnimation"
     backCard.style.display = 'grid'
     backPlayer.style.display = 'grid'
+
+    const playerHTML = `
+    <li><img id="backCard" src="../opdracht2/images/back-card.jpeg" alt="Back card"></li>
+    <li><img id="backCard" src="../opdracht2/images/back-card.jpeg" alt="Back card"></li>`
+
+    playerList.insertAdjacentHTML("beforeend", playerHTML)
+
+    const dealerHTML = `
+    <li><img id="backCard" src="../opdracht2/images/back-card.jpeg" alt="Back card"></li>
+    <li><img id="backCard" src="../opdracht2/images/back-card.jpeg" alt="Back card"></li>`
+
+    dealerList.insertAdjacentHTML("beforeend", dealerHTML)
 }
 
 function getCards() {
@@ -52,24 +65,27 @@ function getCards() {
 
 const newButtons = document.querySelector("section:last-of-type ul:nth-of-type(2)")
 
-
 // Show new buttons, display cards and hide h1
 function showButtons() {
     newButtons.style.display = "flex"
     dealButton.style.display = "none"
     betText.style.display = "none"
-    backCard.style.display = "none"
-    backPlayer.style.display = "none"
+
 }
 
+getCards()
 
-function combineButton() {
+dealButton.addEventListener('click', () => {
     getBackCards()
     showButtons()
-}
 
-// call the 2 functions
-dealButton.onclick = combineButton()
+    setTimeout(() => {
+        getCards()
+    }, "2000")
+
+})
+
+
 
 
 
