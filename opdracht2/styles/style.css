@@ -189,9 +189,10 @@ section:first-of-type {
 	display: none;
 	margin: 0;
 	padding: 0;
-	width: min-content;
 	grid-template-columns: 1fr 1fr;
+	width: min-content;
 	min-height: min-content;
+	grid-area: 3 / 1 / -1 / 2;
 	align-self: start;
 
 }
@@ -203,41 +204,41 @@ section:first-of-type {
 	grid-template-columns: 1fr 1fr;
 	width: min-content;
 	min-height: min-content;
-	grid-row-start: 3;
-	align-self: start;
+	grid-area: 1 / 1 / 2 / 2;
+	align-self: end;
 
 }
 
 .cardAnimation {
-	animation-name: getCardsAnimation;
-	animation-duration: 2s;
+	animation-name: getCardsAnimation, flipCard;
+	animation-duration: 2s, 1s;
 	position: relative;
 	top: 1rem;
 	right: 1rem;
-	display: grid;
 }
 
 /* front of the cards */
 .dealerCards {
-	display: none;
+	display: grid;
 	margin: 0;
 	padding: 0;
 	grid-template-columns: 1fr 1fr;
 	width: min-content;
 	min-height: min-content;
-	grid-area: 2 / 2 / 4 / -4;
+	grid-area: 3 / 1 / -1 / 2;
+	align-self: start;
 	z-index: 10;
 }
 
 .playerCards {
-	display: none;
+	display: grid;
 	margin: 0;
 	padding: 0;
 	grid-template-columns: 1fr 1fr;
 	width: min-content;
 	min-height: min-content;
-	grid-area: 1 / 1 / 3 / -1;
-	align-self: start;
+	grid-area: 1 / 1 / 2 / 2;
+	align-self: end;
 	z-index: 10;
 }
 

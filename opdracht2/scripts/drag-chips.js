@@ -11,7 +11,7 @@ const bottomChips = new Sortable(chips, {
         // Doesnt work ?!
     },
     animation: 50
-});
+})
 
 const middleStack = new Sortable(chipStack, {
     group: {
@@ -20,4 +20,4 @@ const middleStack = new Sortable(chipStack, {
         sort: false
     },
     animation: 50
-});
+})

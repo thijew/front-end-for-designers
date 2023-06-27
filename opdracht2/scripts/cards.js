@@ -73,15 +73,13 @@ function showButtons() {
 
 }
 
-getCards()
-
 dealButton.addEventListener('click', () => {
     getBackCards()
     showButtons()
 
     setTimeout(() => {
         getCards()
-    }, "2000")
+    }, "3000")
 
 })
 
