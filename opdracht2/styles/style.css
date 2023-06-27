@@ -194,6 +194,9 @@ section:first-of-type {
 	min-height: min-content;
 	grid-area: 3 / 1 / -1 / 2;
 	align-self: start;
+	animation-name: getCardsAnimation, flipCard;
+	animation-duration: 2s, 1s;
+	animation-delay: 0s, 2s;
 
 }
 
@@ -206,15 +209,10 @@ section:first-of-type {
 	min-height: min-content;
 	grid-area: 1 / 1 / 2 / 2;
 	align-self: end;
-
-}
-
-.cardAnimation {
 	animation-name: getCardsAnimation, flipCard;
 	animation-duration: 2s, 1s;
-	position: relative;
-	top: 1rem;
-	right: 1rem;
+	animation-delay: 0s, 2.1s;
+
 }
 
 /* front of the cards */

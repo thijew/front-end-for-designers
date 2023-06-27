@@ -22,9 +22,6 @@ async function getData(URL) {
 
 // Show the back of the cards
 function getBackCards() {
-
-    backCard.style.animation = "getCardsAnimation"
-    backCard.style.animation = "getCardsAnimation"
     backCard.style.display = 'grid'
     backPlayer.style.display = 'grid'
 
