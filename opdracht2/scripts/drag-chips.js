@@ -6,9 +6,9 @@ const chipStack = document.querySelector('.chipStack')
 const bottomChips = new Sortable(chips, {
     group: {
         name: 'shared',
-        pull: 'clone', 
+        pull: 'clone',
         sort: false
-
+        // Doesnt work ?!
     },
     animation: 50
 });
@@ -20,5 +20,4 @@ const middleStack = new Sortable(chipStack, {
         sort: false
     },
     animation: 50
-
 });

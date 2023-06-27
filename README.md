@@ -9,6 +9,7 @@
   3. [BEN-G](https://www.ben-g.nl/)
   4. [keyboard shortcuts](https://www.youtube.com/watch?v=lNJMDTSkNXo)
   5. [keyboard functions](https://bestofjs.org/projects/hotkeys)
+  6. [Card animation inspiration](https://codepen.io/nelledejones/pen/gOOPWrK)
 
 
 

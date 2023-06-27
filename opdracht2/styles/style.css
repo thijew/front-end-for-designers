@@ -171,18 +171,78 @@ section:first-of-type {
 	position: relative;
 }
 
+
+
 .dealerCards,
-.playerCards {
-	display: grid;
+.backDealer {
+	position: relative;
+	display: none;
 	margin: 0;
 	padding: 0;
 	grid-template-columns: 1fr 1fr;
+	grid-area: 1 / 3 / 1 / -4;
+	width: min-content;
+	min-height: min-content;
 }
 
-section:first-of-type ul li {
+.playerCards,
+.backPlayer {
+	position: relative;
+	display: none;
+	margin: 0;
+	padding: 0;
+	grid-template-columns: 1fr 1fr;
+	grid-area: 3 / -2 / -1 / -4;
+	width: max-content;
+	min-height: min-content;
+} 
+
+/* back of the cards */
+.backDealer {
+	position: relative;
+	display: none;
+	margin: 0;
+	padding: 0;
+	grid-template-columns: 1fr 1fr;
+	grid-area: 1 / 3 / 1 / -4;
+	width: max-content;
+	min-height: min-content;
+}
+
+.backPlayer {
+	position: relative;
+	display: none;
+	margin: 0;
+	padding: 0;
+	grid-template-columns: 1fr 1fr;
+	grid-area: 3 / -2 / -1 / -4;
+	width: max-content;
+	min-height: min-content;
+}
+
+.cardAnimation {
+	animation-name: getCardsAnimation;
+	animation-duration: 1.5s;
+	z-index: -1;
+	position: relative;
+	top: 0.5rem;
+	right: -0.5rem;
+}
+
+.playerCards,
+.dealerCards {
+	animation-name: flipCard;
+	animation-duration: 1s;
+	animation-delay: 2;
+	z-index: 100;
+}
+
+section:first-of-type ul li:first-of-type {
 	position: relative;
 	display: grid;
 	width: 3em;
+	
+	
 }
 
 section:first-of-type ul li img {
@@ -190,11 +250,71 @@ section:first-of-type ul li img {
 	height: 6em;
 }
 
-section:first-of-type ul li:last-of-type img {
-	transform: rotate(10deg);
+section:first-of-type ul:first-of-type  li  img {
+	width: 5em;
+	height: 6em;
+}
+
+section:first-of-type  ul li:last-of-type img {
+	transform: rotate(5deg);
 }
 
 
+@keyframes getCardsAnimation {
+	0% {
+	  opacity: 0;
+	  top: 0.5rem;
+	  right: -0.5rem;
+	}
+
+	5% {
+	  opacity: 0.2;
+	  top: 0.4rem;
+	  right: -0.4rem;
+	}
+
+	10% {
+		opacity: 0.3;
+		top: 0.2rem;
+		right: -0.2rem
+	}
+	
+	60% {
+	  opacity: 1;
+	  transform: translateX(-2rem);
+	}
+	80% { transform: translateX(1rem); }
+	100% { 
+		transform: translateX(0);
+		opacity: 0;
+	}
+  }
+
+  /* show front of the cards */
+  @keyframes flipCard {
+	0% {
+	  transform: perspective(25rem) rotateY(0);
+	  animation-timing-function: ease-out;
+	}
+	40% {
+	  transform: perspective(25rem) translateZ(9.375rem) rotateY(170deg);
+	  animation-timing-function: ease-out;
+	}
+	50% {
+	  transform: perspective(25rem) translateZ(9.375rem) rotateY(190deg) scale(1);
+	  animation-timing-function: ease-in;
+	}
+	80% {
+	  transform: perspective(25rem) rotateY(360deg) scale(0.95);
+	  animation-timing-function: ease-in;
+	}
+	100% {
+	  transform: perspective(25rem) scale(1);
+	  animation-timing-function: ease-in;
+	}
+  }
+  
+  
 
 /* Table */
 section:last-of-type {
@@ -234,6 +354,7 @@ section:last-of-type ul:first-of-type {
 	background-color: var(--chip-middle);
 	border-radius: var(--height);
 	z-index: 2;
+	grid-area: 2 / -3 / 3/ 2;
 }
 
 .chipStack li,

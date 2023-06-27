@@ -4,10 +4,25 @@ const dealerList = document.querySelector(".dealerCards")
 const playerList = document.querySelector(".playerCards")
 const betText = document.querySelector(".betText")
 
+
 const url = "https://deckofcardsapi.com/api/deck/new/draw/?count=4"
 
-// Get the cards from the deck and display in html
-function getCards() {
+
+
+// Show the back of the cards
+function getBackCards() {
+    const backCard = document.querySelector('.backDealer')
+    const backPlayer = document.querySelector('.backPlayer')
+
+    backCard.classList.add('cardAnimation')
+    backPlayer.classList.add('cardAnimation')
+    backCard.style.display = 'grid'
+    backPlayer.style.display = 'grid'
+}
+
+async function getCards() {
+
+
     getData(url).then(cards => {
         const card1 = cards.cards[0]
         const card2 = cards.cards[1]
@@ -15,15 +30,15 @@ function getCards() {
         const card4 = cards.cards[3]
         console.log(cards)
 
-        const playerHTML =`
+        const playerHTML = `
         <li><img src="${card1.image}" alt="${card1.code}"></li>
         <li><img src="${card2.image}" alt="${card2.code}"></li>`
 
         playerList.insertAdjacentHTML("beforeend", playerHTML)
 
-        const dealerHTML =`
+        const dealerHTML = `
         <li><img src="${card3.image}" alt="${card3.code}"></li>
-        <li><img src="./images/back-card.jpeg" ></li>`
+        <li><img src="${card4.image}" alt="${card4.code}"></li>`
 
         dealerList.insertAdjacentHTML("beforeend", dealerHTML)
     })
@@ -40,16 +55,17 @@ function showButtons() {
 
 // Get data from api
 async function getData(URL) {
-	return (
-		fetch(URL)
-		.then ( response => response.json() )
-		.then ( jsonData => jsonData )
-	);
+    return (
+        fetch(URL)
+            .then(response => response.json())
+            .then(jsonData => jsonData)
+    )
 }
+
 
 function combineButton() {
     showButtons()
-    getCards()
+    getBackCards()
 }
 // call the 2 functions
 dealButton.onclick = combineButton
