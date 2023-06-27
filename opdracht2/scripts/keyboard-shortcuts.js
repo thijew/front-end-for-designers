@@ -1,17 +1,51 @@
 
-// const chips = document.querySelector('.chips')
+const chipsKey = document.querySelector('.chips')
+const chipStackKey = document.querySelector('.chipStack')
 
-// const chip1 = document.querySelector('.chips > nth-child(0)')
-// const chip2 = document.querySelector('.chips > nth-child(1)')
-// const chip3 = document.querySelector('.chips > nth-child(2)')
-// const chip4 = document.querySelector('.chips > nth-child(3)')
-// const chip5 = document.querySelector('.chips > nth-child(4)')
+const chip1 = chipStack.querySelector('.chip1')
+const chip2 = chipStack.querySelector('.chip2')
+const chip3 = chipStack.querySelector('.chip3')
+const chip4 = chipStack.querySelector('.chip4')
+const chip5 = chipStack.querySelector('.chip5')
 
-// fucntion moveChips() = 
+// Hotkeys setup
+hotkeys('1, 2, 3, 4, 5', function (handler) {
+    const key = handler.key.toLowerCase()
 
-// chip1.addEventListener('keydown', (bet) => {
-//     if (bet.key === "Digit1" {
-//         moveChips()
-
-//     })
-// })
+    switch (key) {
+        case '1':
+            alert('Press')
+            const num1 = document.createElement('li')
+            num1.className = 'chip1'
+            num1.innerHTML = '<button>1</button>'
+            chipStack.appendChild(num1)
+            break
+        case '2':
+            alert('Press')
+            const num2 = document.createElement('li')
+            
+            num2.innerHTML = '<button>5</button>'
+            chipStack.appendChild(num2)
+            break
+        case '3':
+            alert('Press')
+            const num3 = document.createElement('li')
+            num3.innerHTML = '<button>10</button>'
+            chipStack.appendChild(num3)
+            break
+        case '4':
+            alert('Press')
+            const num4 = document.createElement('li')
+            num4.innerHTML = '<button>20</button>'
+            chipStack.appendChild(num4)
+            break
+        case '5':
+            alert('Press')
+            const num5 = document.createElement('li')
+            num5.innerHTML = '<button>50</button>'
+            chipStack.appendChild(num5)
+            break
+        default:
+        // Handle other keys or provide a fallback action
+    }
+});

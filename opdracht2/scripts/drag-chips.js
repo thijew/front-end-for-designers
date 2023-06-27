@@ -1,39 +1,24 @@
 
-
 const chips = document.querySelector('.chips')
-
 const chipStack = document.querySelector('.chipStack')
 
 
-new Sortable(chips, {
+const bottomChips = new Sortable(chips, {
     group: {
         name: 'shared',
-        pull: 'clone', // To clone: set pull to 'clone'
+        pull: 'clone', 
+        sort: false
 
     },
     animation: 50
 });
 
-new Sortable(chipStack, {
+const middleStack = new Sortable(chipStack, {
     group: {
         name: 'shared',
-        pull: 'clone',
+        pull: 'true',
+        sort: false
     },
     animation: 50
 
 });
-
-// hotkeys
-
-// hotkeys(['1', '2', '3', '4', '5'] function (chipStack){
-//     // Prevent the default refresh event under WINDOWS system
-//     if (hotkeys.1) {
-//         console.log('1');
-//     }
-//   });
-
-hotkeys ('*', function() {
-    if (hotkeys.num) {
-        alert('you pressed a!')
-    }
-  })
