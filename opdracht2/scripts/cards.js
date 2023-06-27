@@ -1,16 +1,4 @@
 // JavaScript Document
-console.log("howdy")
-
-// async function getDecks() {
-
-// const url = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6"
-
-// let response = await fetch(url)
-// let decks = await response.json()
-// let deck_id = decks.deck_id
-// }
-
-// getDecks(deck_id)
 const dealButton = document.querySelector(".dealButton")
 const dealerList = document.querySelector(".dealerCards")
 const playerList = document.querySelector(".playerCards")

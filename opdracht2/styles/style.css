@@ -163,7 +163,10 @@ main > h1 {
 
 section:first-of-type {
 	display: grid;
+	justify-content: center;
+	align-items: center;
 	height: 100%;
+	width: 100%;
 	grid-template-rows: 0.2fr 0.2fr 0.2fr;
 	position: relative;
 }
@@ -222,6 +225,22 @@ section:last-of-type ul:first-of-type {
 .chipStack {
 	display: grid;
 	position: relative;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	width: 2.8rem;
+	height: 2.8rem;
+	background-color: var(--chip-middle);
+	border-radius: var(--height);
+	z-index: 2;
+}
+
+.chipStack li,
+.chipStack li button {
+	display: grid;
+	justify-content: center;
+	align-items: center;
 	margin: 0;
 	padding: 0;
 	width: 2.8rem;
