@@ -16,14 +16,15 @@ hotkeys('1, 2, 3, 4, 5', function (handler) {
         case '1':
             alert('Press')
             const num1 = document.createElement('li')
-            num1.className = 'chip1'
+            num1.id = 'chip1'
             num1.innerHTML = '<button>1</button>'
-            chipStack.appendChild(num1)
+            // num1.className = 'chip1'
+            chipStack.appendChild(num1).className = 'chip1';
             break
         case '2':
             alert('Press')
             const num2 = document.createElement('li')
-            
+
             num2.innerHTML = '<button>5</button>'
             chipStack.appendChild(num2)
             break
