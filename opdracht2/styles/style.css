@@ -64,32 +64,28 @@ summary {
 	--height: 3.5rem;
 	--border-width: 0.4rem;
 	--height-middle-chips: 4rem;
-
 }
 
 /* adding darkmode */
 @media (prefers-color-scheme: light) {
 	:root {
-	
-			--clr-text: #222222;
-			--clr-playerTable: #003300;
-			--clr-wood: #4A2F00;
-			--clr-secondary: #002244;
-			--clr-btn: #660066;
-			--clr-money: #FFCC00;
-		  
-			--chip-1: #990000;
-			--chip-2: #000099;
-			--chip-3: #008000;
-			--chip-4: #FF5500;
-			--chip-5: #333333;
-			--chip-break: #FFFFFF;
-			--chip-middle: #FFFFFFC4;
-		  
-		  
+
+		--clr-text: #222222;
+		--clr-playerTable: #003300;
+		--clr-wood: #4A2F00;
+		--clr-secondary: #002244;
+		--clr-btn: #660066;
+		--clr-money: #FFCC00;
+
+		--chip-1: #990000;
+		--chip-2: #000099;
+		--chip-3: #008000;
+		--chip-4: #FF5500;
+		--chip-5: #333333;
+		--chip-break: #FFFFFF;
+		--chip-middle: #FFFFFFC4;
 	}
 }
-
 
 
 
@@ -114,8 +110,6 @@ body {
 li {
 	list-style: none;
 }
-
-/* jouw code */
 
 /* header */
 
@@ -147,7 +141,7 @@ header div {
 	transform: rotate(-45.07deg);
 }
 
-header > div > img {
+header>div>img {
 	position: absolute;
 	top: 0.5rem;
 	right: 1.5rem;
@@ -167,7 +161,7 @@ main {
 	text-align: center;
 }
 
-main > h1 {
+main>h1 {
 	height: fit-content;
 	font-family: var(--header-font);
 	display: flex;
@@ -220,7 +214,7 @@ section:first-of-type {
 	position: relative;
 	top: 1rem;
 	right: 1rem;
-	display: flex;
+	display: grid;
 }
 
 /* front of the cards */
@@ -235,7 +229,7 @@ section:first-of-type {
 	z-index: 10;
 }
 
-.playerCards{
+.playerCards {
 	display: none;
 	margin: 0;
 	padding: 0;
@@ -245,7 +239,7 @@ section:first-of-type {
 	grid-area: 1 / 1 / 3 / -1;
 	align-self: start;
 	z-index: 10;
-} 
+}
 
 section:first-of-type ul li:first-of-type {
 	width: 3em;
@@ -256,22 +250,22 @@ section:first-of-type ul li img {
 	height: 6em;
 }
 
-section:first-of-type >  ul > li:last-of-type img {
+section:first-of-type>ul>li:last-of-type img {
 	transform: rotate(5deg);
 }
 
 
 @keyframes getCardsAnimation {
 	0% {
-	  opacity: 0;
-	  top: 0.5rem;
-	  right: -0.5rem;
+		opacity: 0;
+		top: 0.5rem;
+		right: -0.5rem;
 	}
 
 	5% {
-	  opacity: 0.2;
-	  top: 0.4rem;
-	  right: -0.4rem;
+		opacity: 0.2;
+		top: 0.4rem;
+		right: -0.4rem;
 	}
 
 	10% {
@@ -279,44 +273,60 @@ section:first-of-type >  ul > li:last-of-type img {
 		top: 0.2rem;
 		right: -0.2rem
 	}
-	
+
 	60% {
-	  opacity: 1;
-	  transform: translateX(-2rem);
+		opacity: 1;
+		transform: translateX(-2rem);
 	}
-	80% { transform: translateX(1rem); }
-	100% { 
+
+	80% {
+		transform: translateX(1rem);
+	}
+	99% {
+		opacity: 1;
+	}
+	100% {
 		transform: translateX(0);
 		opacity: 0;
 		z-index: -1;
 	}
-  }
 
-  /* show front of the cards */
-  @keyframes flipCard {
 	0% {
-	  transform: perspective(25rem) rotateY(0);
-	  animation-timing-function: ease-out;
+		transform: translateX(0);
+		opacity: 0;
+		z-index: -1;
 	}
+}
+
+/* show front of the cards */
+@keyframes flipCard {
+	0% {
+		transform: perspective(25rem) rotateY(0);
+		animation-timing-function: ease-out;
+	}
+
 	40% {
-	  transform: perspective(25rem) translateZ(9.375rem) rotateY(170deg);
-	  animation-timing-function: ease-out;
+		transform: perspective(25rem) translateZ(9.375rem) rotateY(170deg);
+		animation-timing-function: ease-out;
 	}
+
 	50% {
-	  transform: perspective(25rem) translateZ(9.375rem) rotateY(190deg) scale(1);
-	  animation-timing-function: ease-in;
+		transform: perspective(25rem) translateZ(9.375rem) rotateY(190deg) scale(1);
+		animation-timing-function: ease-in;
 	}
+
 	80% {
-	  transform: perspective(25rem) rotateY(360deg) scale(0.95);
-	  animation-timing-function: ease-in;
+		transform: perspective(25rem) rotateY(360deg) scale(0.95);
+		animation-timing-function: ease-in;
 	}
+
 	100% {
-	  transform: perspective(25rem) scale(1);
+		transform: perspective(25rem) scale(1);
 		z-index: 10;
-	  animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
 	}
-  }
-  
+}
+
 /* Chips in the middle*/
 .chipStack {
 	display: flex;
@@ -347,7 +357,7 @@ section:first-of-type >  ul > li:last-of-type img {
 	height: 2.8rem;
 	background-color: var(--chip-middle);
 	border-radius: var(--height);
-	grid-area: 1 / 2 / -3 / 2 ;
+	grid-area: 1 / 2 / -3 / 2;
 	text-align: center;
 }
 
@@ -355,7 +365,8 @@ section:first-of-type >  ul > li:last-of-type img {
 	content: "";
 	position: absolute;
 	top: -0.6rem;
-	left: -0.6rem;;
+	left: -0.6rem;
+	;
 	margin: 0;
 	padding: 0;
 	width: var(--height-middle-chips);
@@ -387,17 +398,17 @@ section:first-of-type >  ul > li:last-of-type img {
 @keyframes chipBgGradient {
 	0% {
 		visibility: visible;
-		background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
-    }
+		background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%)
+	}
 
 	100% {
 		visibility: visible;
-		background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-    }
+		background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+	}
 }
 
 
-  
+
 
 /* bottom Table */
 section:last-of-type {
@@ -411,6 +422,7 @@ section:last-of-type {
 	flex-direction: column;
 	border-radius: 20% 20% 0 0;
 }
+
 /* chip rack */
 section:last-of-type ul:first-of-type {
 	display: flex;
@@ -426,7 +438,7 @@ section:last-of-type ul:first-of-type {
 
 /* chips */
 section:last-of-type ul:first-of-type li,
-.chipStack li{
+.chipStack li {
 	display: flex;
 	text-align: center;
 	justify-content: center;
@@ -439,7 +451,7 @@ section:last-of-type ul:first-of-type li,
 
 section:last-of-type ul:first-of-type li button,
 .chipStack li button {
-	text-decoration:  none;
+	text-decoration: none;
 	background-color: transparent;
 	border: transparent;
 	color: var(--chip-break);
@@ -452,18 +464,22 @@ section:last-of-type ul:first-of-type li:nth-of-type(1),
 #chip1 {
 	background-color: var(--chip-1);
 }
+
 section:last-of-type ul:first-of-type li:nth-of-type(2),
 #chip2 {
 	background-color: var(--chip-2);
 }
+
 section:last-of-type ul:first-of-type li:nth-of-type(3),
 #chip3 {
 	background-color: var(--chip-3);
 }
+
 section:last-of-type ul:first-of-type li:nth-of-type(4),
 #chip4 {
 	background-color: var(--chip-4);
 }
+
 section:last-of-type ul:first-of-type li:nth-of-type(5),
 #chip5 {
 	background-color: var(--chip-5);
@@ -473,7 +489,7 @@ section:last-of-type ul:first-of-type li:nth-of-type(5),
 
 /* Buttons */
 
-section > button,
+section>button,
 section:last-of-type ul:last-of-type li button {
 	font-family: var(--header-font);
 	text-align: center;
@@ -492,4 +508,3 @@ section:last-of-type ul:nth-of-type(2) {
 	gap: 1rem;
 	justify-content: space-evenly;
 }
-

@@ -28,17 +28,17 @@ function getBackCards() {
     backCard.style.display = 'grid'
     backPlayer.style.display = 'grid'
 
-    const playerHTML = `
+    const backCardDealerHTML = `
     <li><img id="backCard" src="../opdracht2/images/back-card.jpeg" alt="Back card"></li>
     <li><img id="backCard" src="../opdracht2/images/back-card.jpeg" alt="Back card"></li>`
 
-    playerList.insertAdjacentHTML("beforeend", playerHTML)
+    backCard.insertAdjacentHTML("beforeend", backCardDealerHTML)
 
-    const dealerHTML = `
+    const backCardPlayerHTML = `
     <li><img id="backCard" src="../opdracht2/images/back-card.jpeg" alt="Back card"></li>
     <li><img id="backCard" src="../opdracht2/images/back-card.jpeg" alt="Back card"></li>`
 
-    dealerList.insertAdjacentHTML("beforeend", dealerHTML)
+    backPlayer.insertAdjacentHTML("beforeend", backCardPlayerHTML)
 }
 
 function getCards() {
